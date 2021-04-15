@@ -3,21 +3,147 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
-    <script src="app.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <title>Shopping Cart</title>
+  </head>
+  <body>
+    <div class="jumbotron">
+        <div class="container text-center">
+          <h1>Online Store</h1>      
+          <p>Mission, Vission & Values</p>
+        </div>
+      </div>
+      
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="#">Logo</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">Products</a></li>
+              <li><a href="#">Deals</a></li>
+              <li><a href="#">Stores</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li> -->
+              <button type="button" class="btn btn-primary glyphicon glyphicon-shopping-cart"  data-toggle="modal" data-target="#cart">Cart (<span class="total-count"></span>)</button><button class="clear-cart btn btn-danger">Clear Cart</button></div>
+             <!-- <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>-->
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+      <div class="container">    
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="panel panel-primary">
+              <div class="panel-heading">Computer Science</div>
+              <h4 class="card-title">Software Design</h4>
+              <div class="panel-body"><img src="https://images-na.ssl-images-amazon.com/images/I/51t2s-WNb3L._SX218_BO1,204,203,200_QL40_FMwebp_.jpg" class="img-responsive"  alt="Image"></div>
+              <p class="card-text">Price: &euro;23</p>
+              <a href="#" data-name="Software-Design" data-price="23" class="add-to-cart btn btn-primary">Add to cart</a>
+            </div>
+          </div>
+          <div class="col-sm-4"> 
+            <div class="panel panel-primary">
+                <div class="panel-heading">Computer Science</div>
+                <h4 class="card-title">Design Patterns</h4>
+              <div class="panel-body"><img src="https://images-na.ssl-images-amazon.com/images/I/51szD9HC9pL._SX218_BO1,204,203,200_QL40_FMwebp_.jpg" class="img-responsive" alt="Image"></div>
+              <p class="card-text">Price: &euro;20</p>
+              <a href="#" data-name="Design-Patterns" data-price="20" class="add-to-cart btn btn-primary">Add to cart</a>
+            </div>
+          </div>
+          <div class="col-sm-4"> 
+            <div class="panel panel-primary">
+                <div class="panel-heading">Computer Science</div>
+                <h4 class="card-title">Deep Learning</h4>
+              <div class="panel-body"><img src="https://images-na.ssl-images-amazon.com/images/I/61qbj4KwauL._SX218_BO1,204,203,200_QL40_FMwebp_.jpg" class="img-responsive" alt="Image"></div>
+              <p class="card-text">Price: &euro;20</p>
+              <a href="#" data-name="Deep-Learning" data-price="20" class="add-to-cart btn btn-primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+      </div><br>
+      
+      <div class="container">    
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="panel panel-primary">
+              <div class="panel-heading">Computer Science</div>
+              <h4 class="card-title">Clean Code</h4>
+              <div class="panel-body"><img src="https://images-na.ssl-images-amazon.com/images/I/41yafGMO+rL._SX258_BO1,204,203,200_.jpg" class="img-responsive" alt="Image"></div>
+              <p class="card-text">Price: &euro;24</p>
+              <a href="#" data-name="Clean-code" data-price="24" class="add-to-cart btn btn-primary">Add to cart</a>
+            </div>
+          </div>
+          <div class="col-sm-4"> 
+            <div class="panel panel-primary">
+              <div class="panel-heading">Computer Science</div>
+              <h4 class="card-title">Design</h4>
+              <div class="panel-body"><img src="https://images-na.ssl-images-amazon.com/images/I/51sZW87slRL._SX218_BO1,204,203,200_QL40_FMwebp_.jpg" class="img-responsive" alt="Image"></div>
+              <p class="card-text">Price: &euro;16</p>
+              <a href="#" data-name="Design" data-price="16" class="add-to-cart btn btn-primary">Add to cart</a>
+            </div>
+          </div>
+          <div class="col-sm-4"> 
+            <div class="panel panel-primary">
+              <div class="panel-heading">Computer Science</div>
+              <h4 class="card-title">Clean Architecture</h4>
+              <div class="panel-body"><img src="https://images-na.ssl-images-amazon.com/images/I/41TPrNDI50L._SX387_BO1,204,203,200_.jpg" class="img-responsive" alt="Image"></div>
+              <p class="card-text">Price: &euro;20</p>
+              <a href="#" data-name="Clean-Architecture" data-price="20" class="add-to-cart btn btn-primary">Add to cart</a>
+            </div>
+          </div>
+        </div>
+      </div><br><br>
+      <footer class="container-fluid text-center">
+        <p>Online Store Copyright</p>  
+        <form class="form-inline">Get deals:
+          <input type="email" class="form-control" size="50" placeholder="Email Address">
+          <button type="button" class="btn btn-danger">Sign Up</button>
+        </form>
+      </footer>
+
+
+      <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <table class="show-cart table">
+                
+              </table>
+              <div>Total price: $<span class="total-cart"></span></div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Order now</button>
+            </div>
+          </div>
+        </div>
+      <script src="app.js"></script>
   </body>
 </html>
+
